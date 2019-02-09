@@ -7,6 +7,7 @@ module.exports = {
     },
 
     async store(req, res) {
+        console.log('body', req.body)
         const post = await Post.create(req.body)
         return res.json(post)
     },
